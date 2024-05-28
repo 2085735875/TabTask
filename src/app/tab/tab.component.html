@@ -1,0 +1,46 @@
+<ul class="nav nav-pills mt-4">
+    <li class="nav-items">
+        <a href="javascript:;" class="nav-link active"
+         [ngClass]="{active : selectedFrameWork.toLowerCase().includes('angular')}"
+         (click)="onClick('angular')">
+            Angular
+        </a>
+    </li>
+    <li class="nav-items">
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{active : selectedFrameWork.toLowerCase().includes('react')}"
+        (click)="onClick('react')">
+            React
+        </a>
+    </li>
+    <li class="nav-items">
+        <a href="javascript:;" class="nav-link" 
+        [ngClass]="{active : selectedFrameWork.toLowerCase().includes('vue')}"
+        (click)="onClick('vue')">
+            Vue
+        </a>
+    </li>
+</ul>
+<hr>
+<div class="card ">
+    <div class="card-body bg-success text-white" *ngIf="selectedFrameWork === 'angular'">
+        <Strong>Angular</Strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ducimus tempore sit, 
+        laborum omnis asperiores ea quis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Temporibus iure tenetur, exercitationem velit atque maxime deleniti quo.
+    </div>
+</div>
+<div class="card ">
+    <div class="card-body bg-secondary text-white" *ngIf="selectedFrameWork === 'react'">
+        <Strong>React</Strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ducimus tempore sit, 
+        laborum omnis asperiores ea quis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Temporibus iure tenetur, exercitationem velit atque maxime deleniti quo.
+    </div>
+</div>
+<div class="card ">
+    <div class="card-body bg-primary text-white" *ngIf="selectedFrameWork === 'vue'">
+        <Strong>Vue</Strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ducimus tempore sit, 
+        laborum omnis asperiores ea quis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Temporibus iure tenetur, exercitationem velit atque maxime deleniti quo.
+    </div>
+</div>
+
