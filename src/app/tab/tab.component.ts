@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabComponent implements OnInit {
 
-  selectedFrameWork : string = 'react'
+  selectedFrameWork : string = 'angular'
   constructor() { }
 
   ngOnInit(): void {

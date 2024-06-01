@@ -1,0 +1,25 @@
+
+
+<ul class="nav nav-pills">
+    <li class="nav-item"   (click)="selectSkill(skill.skillName)" *ngFor="let skill of skillsArray">
+
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{ 
+            active : framework.toLowerCase().includes(skill.skillName)
+        }"
+        >
+        {{skill.skillName}}
+    </a>
+    </li>
+</ul>
+
+<hr>
+
+<ng-container  *ngFor="let skill of skillsArray">
+    <div class="card" >
+        <div class="card-body" [innerHTML]="skill.content" *ngIf="framework === skill.skillName">
+    
+        </div>
+    </div>
+</ng-container>
+
