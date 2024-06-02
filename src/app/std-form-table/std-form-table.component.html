@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center">Student Form</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input #fname id="fname" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Last Name</label>
+                        <input #lname id="lname" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Email</label>
+                        <input #email id="email" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Contact</label>
+                        <input #contact id="contact" type="text" class="form-control">
+                    </div>
+                   
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-success btn-block" 
+                    (click)="addStudent()"
+                    >Add Student</button>
+                </div>
+                </div>
+            </div>
+            
+        <div class="col-md-6 mt-4">
+            <div class="table-responsive">
+                <table class="table table-bordered" *ngIf="stdArray.length > 0">
+                    <thead class="bg-info text-white">
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Fname</th>
+                            <th>Lname</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let std of stdArray; index as i">
+                            <td>{{i+1}}</td>
+                            <td>{{std.fname}}</td>
+                            <td>{{std.lname}}</td>
+                            <td>{{std.email}}</td>
+                            <td>{{std.contact}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
